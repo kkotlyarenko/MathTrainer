@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    tools:context=".TrainSelActivity"
+    android:layout_centerHorizontal="true"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_marginTop="25dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/chelsea_market"
+        android:text="@string/app_inname"
+        android:textAlignment="center"
+        android:textColor="@android:color/black"
+        android:textSize="45sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/chelsea_market"
+        android:text="@string/trainingSel"
+        android:textAlignment="center"
+        android:textColor="@android:color/black"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/btn_sloj"
+        android:layout_width="250dp"
+        android:layout_height="55dp"
+        android:text="@string/btn_plus"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="50dp"
+        android:background="@drawable/btn_singin"
+        android:fontFamily="@font/roboto_mono_bold"/>
+
+    <Button
+        android:id="@+id/btn_vich"
+        android:layout_width="250dp"
+        android:layout_height="55dp"
+        android:text="@string/btn_minus"
+        android:layout_marginBottom="50dp"
+        android:background="@drawable/btn_singin"
+        android:fontFamily="@font/roboto_mono_bold"/>
+
+    <Button
+        android:id="@+id/btn_umn"
+        android:layout_width="250dp"
+        android:layout_height="55dp"
+        android:text="@string/btn_umn"
+        android:background="@drawable/btn_register"
+        android:fontFamily="@font/roboto_mono_bold"
+        android:layout_marginBottom="50dp"/>
+    <Button
+        android:id="@+id/btn_delen"
+        android:layout_width="250dp"
+        android:layout_height="55dp"
+        android:text="@string/btn_delen"
+        android:background="@drawable/btn_singin"
+        android:fontFamily="@font/roboto_mono_bold"
+        android:layout_marginBottom="50dp"/>
+    <Button
+        android:id="@+id/btn_nazad"
+        android:layout_width="250dp"
+        android:layout_height="55dp"
+        android:text="@string/btn_back"
+        android:background="@drawable/btn_register"
+        android:fontFamily="@font/roboto_mono_bold"
+        />
+
+
+
+</LinearLayout>

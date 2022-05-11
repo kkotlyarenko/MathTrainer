@@ -1,0 +1,167 @@
+<resources>
+    <string name="app_name">Math Trainer</string>
+    <string name="app_inname">Math Trainer</string>
+    <string name="name_author">Register app</string>
+    <string name="text_bttom">Выберите нужную опцию</string>
+    <string name="btn_signin">Войти</string>
+    <string name="btn_register">Зарегистрироваться</string>
+    <string name="btn_tren">Тренировка вычислений</string>
+    <string name="btn_instructions">Приемы быстрого счёта</string>
+    <string name="chat">Chat</string>
+    <string name="btn_chat">Общий чат</string>
+    <string name="btn_prof">Мой профиль</string>
+    <string name="btn_changepass">Изменить пароль</string>
+    <string name="btn_changename">Изменить имя</string>
+    <string name="btn_exitprof">Выйти из аккаунта</string>
+    <string name="btn_back">Назад</string>
+    <string name="menu">Menu</string>
+    <string name="profile">My profile</string>
+    <string name="trainingSel">Calculation drills</string>
+    <string name="trainingVich">Subtracting drills</string>
+    <string name="trainingSloj">Adding drills</string>
+    <string name="trainingSlojlvl">Adding drills level select</string>
+    <string name="trainingVichlvl">Subtracting drills level select</string>
+    <string name="trainingUmnlvl">Multiplying drills level select</string>
+    <string name="trainingDellvl">Dividing drills level select</string>
+    <string name="trainingUmnoj">Multiplying drills</string>
+    <string name="trainingDelen">Dividing drills</string>
+    <string name="Sel_lvl">Выберите уровень сложности: </string>
+    <string name="btn_plus">Тренировка сложения</string>
+    <string name="btn_minus">Тренировка вычитания</string>
+    <string name="btn_umn">Тренировка умножения</string>
+    <string name="btn_delen">Тренировка деления</string>
+    <string name="urov_legk">Легкий уровень</string>
+    <string name="urov_sred">Средний уровень</string>
+    <string name="urov_sloj">Сложный уровень</string>
+    <string name="txt_sl_urov_legk">Adding easy drills</string>
+    <string name="txt_sl_urov_sredn">Adding average drills</string>
+    <string name="txt_sl_urov_sloj">Adding advanced drills</string>
+    <string name="txt_vich_urov_legk">Subtracting easy drills</string>
+    <string name="txt_vich_urov_sredn">Subtracting average drills</string>
+    <string name="txt_vich_urov_sloj">Subtracting advanced drills</string>
+    <string name="txt_umn_urov_legk">Multiplying easy drills</string>
+    <string name="txt_umn_urov_sredn">Multiplying average drills</string>
+    <string name="txt_umn_urov_sloj">Multiplying advanced drills</string>
+    <string name="txt_del_urov_legk">Dividing easy drills</string>
+    <string name="txt_del_urov_sredn">Dividing average drills</string>
+    <string name="txt_del_urov_sloj">Dividing advanced drills</string>
+    <string name="Vvotvet">Введите ответ</string>
+    <string name="Vvod">Ответить</string>
+    <string name="Sled">Следующий пример</string>
+    <string name="instructions">Instructions</string>
+    <string name="instrukcii">
+        <big><b>Умножение и деление на 4</b> </big>\n
+        Чтобы число умножить на 4, его дважды удваивают. \n
+            Например:\n
+            <b>213 * 4 = (213 * 2 ) * 2 = 426 * 2 = 852</b>\n\n
+
+        Чтобы число разделить на 4, его дважды делят на два.\n
+        Например:\n
+        <b>124 : 4 = (124 : 2) : 2 = 62 : 2 = 31</b>\n\n
+
+        <big> <b>Умножение и деление на 5, 50, 500…</b> </big>\n
+        Чтобы число умножить на 5, 50, 500… нужно умножить его на 10, 100, 1000… и разделить на 2.\n
+        Например: \n
+        <b>138 * 5 = (138 * 10) : 2 = 1380 : 2 = 690</b>\n\n
+
+        Чтобы разделить число на 5, 50, 500… нужно разделить его на 10, 100, 1000… и умножить на 2.\n
+        Например:\n
+        <b>10800 : 50 = 10800 : 100 * 2 = 216</b>\n\n
+
+
+
+Умножение на 25, 250, 2500…
+Чтобы число умножить на 25, 250, 2500\ldots нужно умножить его на 100, 1000, 10000\ldots, и полученный результат разделить на 4 (на 4 делятся только те числа, у которых две последние цифры представляют собой число, делящееся на 4).
+
+Например:
+
+   \begin{equation*} 124 \cdot 25=124:4 \cdot 100=3100; \end{equation*}
+
+   \begin{equation*} 1716 \cdot 25=1716:4 \cdot 100=42900; \end{equation*}
+
+   \begin{equation*} 542 \cdot 25=(542 \cdot 100):4=13550. \end{equation*}
+
+Деление на 25, 250, 2500…
+Чтобы выполнить деление числа на 25, 250, 2500\ldots и т.д. это число надо разделить на 100, 1000, 10000\ldots и т.д. и умножить на 4.
+
+Например:
+
+   \begin{equation*} 31200:25=31200:100 \cdot 4=1248. \end{equation*}
+
+Умножение на 125, 1250, 12500,…
+Чтобы число умножить на 125, 1250, 125000\ldots надо это число разделить на 8 и умножить на 1000. (На 8 делятся только те числа, у которых три последние цифры выражают число, делящееся на 8).
+
+Например:
+
+   \begin{equation*} 32 \cdot 125=32:8 \cdot 1000=4000; \end{equation*}
+
+   \begin{equation*} 3168 \cdot 125=3168:8 \cdot 1000=396000. \end{equation*}
+
+Деление на 125, 1250, 12500,…
+Чтобы число разделить на 125, 1250, 12500\ldots надо это число разделить на 1000 и умножить на 8.
+
+Например:
+
+   \begin{equation*} 4000 : 125 = 4000 : 1000 \cdot 8 = 32; \end{equation*}
+
+   \begin{equation*} 9000 : 125 = 9000 : 1000 \cdot 8 = 72. \end{equation*}
+
+Умножение на 1.5
+Чтобы умножить число на 1.5 нужно к исходному числу прибавить его половину.
+
+Например:
+
+   \begin{equation*} 24 \cdot 1.5 = 24+12 = 36; \end{equation*}
+
+   \begin{equation*} 129 \cdot 1.5 = 129 + 64.5 = 193.5. \end{equation*}
+
+Умножение на 9
+Чтобы умножить число на 9, к нему приписывают 0 и отнимают исходное число.
+
+Например:
+
+   \begin{equation*} 241 \cdot 9 = 2410 - 241 = 2169. \end{equation*}
+
+Умножение на 11
+Чтобы умножить число на 11. К нему приписывают 0 и прибавляют исходное число.
+
+Например:
+
+   \begin{equation*} 47 \cdot 11 = 470 + 47 = 517; \end{equation*}
+
+   \begin{equation*} 241 \cdot 11 = 2410 + 241 = 2651. \end{equation*}
+
+Чтобы двузначное число умножить на 11, сумма цифр которого не превышает 10, надо цифры этого числа раздвинуть и поставить между ними сумму этих цифр.
+
+Например:
+
+   \begin{equation*} 72 \cdot 11 = 7 (7+2) 2 = 792; \end{equation*}
+
+   \begin{equation*} 35 \cdot 11 = 3 (3+5) 5 = 385. \end{equation*}
+
+Чтобы умножить на 11 двузначное число, сумма цифр которого 10 или больше 10, надо мысленно раздвинуть цифры этого числа, поставить между ними сумму этих цифр, а затем к первой цифре прибавить единицу, а вторую и последнюю (третью) оставить без изменения.
+
+Например:
+
+   \begin{equation*} 94 \cdot 11 = 9 (9+4) 4 = 9 (13) 4 = (9+1) 34 =1034; \end{equation*}
+
+   \begin{equation*} 73 \cdot 11 = 7 (7+3) 3 = 7 (10) 3 = (7+1) 03 = 803. \end{equation*}
+
+Умножение двухзначного числа на 111
+Умножим 42 на 111. Мысленно раздвигаем цифры первого сомножителя 42 (4\ldots 2), предварительно найдя сумму его цифр: 4+2=6, и вставляем полученную сумму, повторив эту операцию дважды.
+
+Например:
+
+   \begin{equation*} 4\ldots 2 = 4662, \end{equation*}
+
+   \begin{equation*} 42 \cdot 111 = 4662. \end{equation*}
+
+Возведение в квадрат числа, оканчивающегося цифрой 5
+Чтобы возвести в квадрат число, оканчивающегося цифрой 5 (например, 65), умножают число его десятков (6) на число десятков, увеличенное на 1 (на 6+1=7), и к полученному числу приписывают 25.
+
+Например:
+
+   \begin{equation*} 65 = (6 \cdot 7)25 = 4225. \end{equation*}
+    </string>
+
+</resources>

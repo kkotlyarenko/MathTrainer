@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.mathsolver">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".InstructActivity"
+            android:exported="false" />
+        <activity android:name=".ChatActivity" />
+        <activity android:name=".DelHard" />
+        <activity android:name=".DelMid" />
+        <activity android:name=".DelLeg" />
+        <activity android:name=".TrainDelLevelSel" />
+        <activity android:name=".UmnHard" />
+        <activity android:name=".UmnMid" />
+        <activity android:name=".UmnLeg" />
+        <activity android:name=".TrainUmnLevelSel" />
+        <activity android:name=".MinusHard" />
+        <activity android:name=".MinusMid" />
+        <activity android:name=".MinusLeg" />
+        <activity android:name=".TrainVichLevelSel" />
+        <activity android:name=".PlusHard" />
+        <activity android:name=".PlusMid" />
+        <activity android:name=".PlusLeg" />
+        <activity android:name=".TrainSlojLevelSel" />
+        <activity android:name=".TrainSelActivity" />
+        <activity android:name=".MenuActivity" />
+        <activity android:name=".GlavnActivity" />
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+    </application>
+
+</manifest>

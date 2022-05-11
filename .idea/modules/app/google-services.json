@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "119720978548",
+    "firebase_url": "https://mathauthorisation.firebaseio.com",
+    "project_id": "mathauthorisation",
+    "storage_bucket": "mathauthorisation.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:119720978548:android:e6aa1a8c2755636d3a4921",
+        "android_client_info": {
+          "package_name": "com.example.mathsolver"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "119720978548-95atp2vv9tqm0vdpqklke4h2p6tqv0jf.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.mathsolver",
+            "certificate_hash": "2947429c574e847365827beffffc77a1069d5b9d"
+          }
+        },
+        {
+          "client_id": "119720978548-52498p4elfi325poni7ivuatsilg6vms.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC7i2qsGmRefO3stNB1-4epq1kzQkX7u0I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "119720978548-52498p4elfi325poni7ivuatsilg6vms.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
