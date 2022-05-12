@@ -26,7 +26,7 @@ import static android.graphics.Color.GREEN;
 import static android.graphics.Color.RED;
 
 public class DelHard extends AppCompatActivity {
-    Button otvet, sled, back;
+    Button otvetb, sled, back;
     private Activity mActivity;
     Random randint = new Random();
     int our1RandomNumber;
@@ -35,13 +35,13 @@ public class DelHard extends AppCompatActivity {
     String uid;
     private FirebaseAuth mAuth;
 
-    int righti, wrongi;
+    int righti, wrongi, ratingi;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_del_hard);
-        otvet = findViewById(R.id.btn_otvet);
+        otvetb = findViewById(R.id.btn_otvet);
         sled = findViewById(R.id.btn_next);
         back = findViewById(R.id.btn_nazad2);
         mActivity = DelHard.this;
@@ -54,8 +54,10 @@ public class DelHard extends AppCompatActivity {
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 String right = dataSnapshot.child("right").getValue().toString();
                 String wrong = dataSnapshot.child("wrong").getValue().toString();
+                String rating = dataSnapshot.child("rating").getValue().toString();
                 righti = Integer.parseInt(right);
                 wrongi = Integer.parseInt(wrong);
+                ratingi = Integer.parseInt(rating);
             }
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
@@ -74,7 +76,7 @@ public class DelHard extends AppCompatActivity {
         TextView result = (TextView) findViewById(R.id.textprem);
         result.setText(our1RandomNumber + " ÷ " + our2RandomNumber + " = ");
 
-        otvet.setOnClickListener(new View.OnClickListener() {
+        otvetb.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 EditText vvodd = findViewById(R.id.otvet);
@@ -88,12 +90,15 @@ public class DelHard extends AppCompatActivity {
                     int result1 = our1RandomNumber / our2RandomNumber;
                     if (result1 == otvet) {
                         verno.setTextColor(GREEN);
-                        verno.setText("Верно!");
+                        verno.setText("Верно!\n+ 20 рейтинга!");
+                        otvetb.setVisibility(View.GONE);
                         FirebaseDatabase.getInstance().getReference().child("Users").child(uid).child("right").setValue(righti + 1);
+                        FirebaseDatabase.getInstance().getReference().child("Users").child(uid).child("rating").setValue(ratingi + 20);
                     } else {
                         verno.setTextColor(RED);
-                        verno.setText("Неверно.");
+                        verno.setText("Неверно.\n- 20 рейтинга!");
                         FirebaseDatabase.getInstance().getReference().child("Users").child(uid).child("wrong").setValue(wrongi + 1);
+                        FirebaseDatabase.getInstance().getReference().child("Users").child(uid).child("rating").setValue(ratingi - 20);
                     }
                 }
             }

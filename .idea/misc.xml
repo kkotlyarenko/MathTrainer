@@ -4,11 +4,22 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/kiril/AndroidStudioProjects/MathTrainer/app/src/main/res/layout/activity_chat.xml" value="0.38385416666666666" />
+        <entry key="..\:/Users/kiril/AndroidStudioProjects/MathTrainer/app/src/main/res/layout/activity_del_hard.xml" value="0.30625" />
         <entry key="..\:/Users/kiril/AndroidStudioProjects/MathTrainer/app/src/main/res/layout/activity_del_leg.xml" value="0.3302083333333333" />
+        <entry key="..\:/Users/kiril/AndroidStudioProjects/MathTrainer/app/src/main/res/layout/activity_del_mid.xml" value="0.30625" />
         <entry key="..\:/Users/kiril/AndroidStudioProjects/MathTrainer/app/src/main/res/layout/activity_glavn.xml" value="0.38385416666666666" />
-        <entry key="..\:/Users/kiril/AndroidStudioProjects/MathTrainer/app/src/main/res/layout/activity_instruct.xml" value="0.26285855588526214" />
+        <entry key="..\:/Users/kiril/AndroidStudioProjects/MathTrainer/app/src/main/res/layout/activity_instruct.xml" value="0.17089530475357248" />
         <entry key="..\:/Users/kiril/AndroidStudioProjects/MathTrainer/app/src/main/res/layout/activity_main.xml" value="0.5541666666666667" />
         <entry key="..\:/Users/kiril/AndroidStudioProjects/MathTrainer/app/src/main/res/layout/activity_menu.xml" value="0.5541666666666667" />
+        <entry key="..\:/Users/kiril/AndroidStudioProjects/MathTrainer/app/src/main/res/layout/activity_minus_hard.xml" value="0.30625" />
+        <entry key="..\:/Users/kiril/AndroidStudioProjects/MathTrainer/app/src/main/res/layout/activity_minus_leg.xml" value="0.30625" />
+        <entry key="..\:/Users/kiril/AndroidStudioProjects/MathTrainer/app/src/main/res/layout/activity_minus_mid.xml" value="0.30625" />
+        <entry key="..\:/Users/kiril/AndroidStudioProjects/MathTrainer/app/src/main/res/layout/activity_plus_hard.xml" value="0.30625" />
+        <entry key="..\:/Users/kiril/AndroidStudioProjects/MathTrainer/app/src/main/res/layout/activity_plus_leg.xml" value="0.30625" />
+        <entry key="..\:/Users/kiril/AndroidStudioProjects/MathTrainer/app/src/main/res/layout/activity_plus_mid.xml" value="0.30625" />
+        <entry key="..\:/Users/kiril/AndroidStudioProjects/MathTrainer/app/src/main/res/layout/activity_umn_hard.xml" value="0.30625" />
+        <entry key="..\:/Users/kiril/AndroidStudioProjects/MathTrainer/app/src/main/res/layout/activity_umn_leg.xml" value="0.30625" />
+        <entry key="..\:/Users/kiril/AndroidStudioProjects/MathTrainer/app/src/main/res/layout/activity_umn_mid.xml" value="0.30625" />
         <entry key="..\:/Users/kiril/AndroidStudioProjects/MathTrainer/app/src/main/res/layout/list_items.xml" value="0.38385416666666666" />
       </map>
     </option>

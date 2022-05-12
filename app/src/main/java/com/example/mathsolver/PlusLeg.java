@@ -26,7 +26,7 @@ import static android.graphics.Color.GREEN;
 import static android.graphics.Color.RED;
 
 public class PlusLeg extends AppCompatActivity {
-    Button otvet, sled, back;
+    Button otvetb, sled, back;
     Random randint = new Random();
     int our1RandomNumber = randint.nextInt(31);
     int our2RandomNumber = randint.nextInt(31);
@@ -35,12 +35,12 @@ public class PlusLeg extends AppCompatActivity {
     DatabaseReference reff;
     String uid;
     private FirebaseAuth mAuth;
-    int righti, wrongi;
+    int righti, wrongi, ratingi;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_plus_leg);
-        otvet = findViewById(R.id.btn_otvet);
+        otvetb = findViewById(R.id.btn_otvet);
         sled = findViewById(R.id.btn_next);
         back = findViewById(R.id.btn_nazad2);
         mActivity = PlusLeg.this;
@@ -53,6 +53,8 @@ public class PlusLeg extends AppCompatActivity {
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 String right = dataSnapshot.child("right").getValue().toString();
                 String wrong = dataSnapshot.child("wrong").getValue().toString();
+                String rating = dataSnapshot.child("rating").getValue().toString();
+                ratingi = Integer.parseInt(rating);
                 righti = Integer.parseInt(right);
                 wrongi = Integer.parseInt(wrong);
             }
@@ -66,7 +68,7 @@ public class PlusLeg extends AppCompatActivity {
         TextView result = (TextView) findViewById(R.id.textprem);
         result.setText(our1RandomNumber + " + " + our2RandomNumber + " = ");
 
-        otvet.setOnClickListener(new View.OnClickListener() {
+        otvetb.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 EditText vvodd = findViewById(R.id.otvet);
@@ -80,12 +82,15 @@ public class PlusLeg extends AppCompatActivity {
                     int result1 = our1RandomNumber + our2RandomNumber;
                     if (result1 == otvet) {
                         verno.setTextColor(GREEN);
-                        verno.setText("Верно!");
+                        verno.setText("Верно!\n+ 5 рейтинга!");
+                        otvetb.setVisibility(View.GONE);
                         FirebaseDatabase.getInstance().getReference().child("Users").child(uid).child("right").setValue(righti + 1);
+                        FirebaseDatabase.getInstance().getReference().child("Users").child(uid).child("rating").setValue(ratingi + 5);
                     } else {
                         verno.setTextColor(RED);
-                        verno.setText("Неверно.");
+                        verno.setText("Неверно.\n- 5 рейтинга!");
                         FirebaseDatabase.getInstance().getReference().child("Users").child(uid).child("wrong").setValue(wrongi + 1);
+                        FirebaseDatabase.getInstance().getReference().child("Users").child(uid).child("rating").setValue(ratingi - 5);
                     }
                 }
             }

@@ -8,6 +8,7 @@ import android.text.format.DateFormat;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -17,6 +18,7 @@ import com.example.mathsolver.Models.User;
 import com.firebase.ui.database.FirebaseListAdapter;
 import com.github.library.bubbleview.BubbleTextView;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.android.material.snackbar.Snackbar;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -30,6 +32,7 @@ import hani.momanii.supernova_emoji_library.Helper.EmojiconEditText;
 public class ChatActivity extends AppCompatActivity {
 private FirebaseListAdapter<Message> adapter;
     DatabaseReference reff;
+    LinearLayout chat_root;
     private FirebaseAuth mAuth;
     private RelativeLayout activity_chat;
     private EmojiconEditText emojiconEditText;
@@ -46,6 +49,7 @@ private FirebaseListAdapter<Message> adapter;
         emojiconEditText = findViewById(R.id.txt_fild);
         emojIconActions = new EmojIconActions(getApplicationContext(), activity_chat, emojiconEditText, emoji_btn);
         emojIconActions.ShowEmojIcon();
+        chat_root = findViewById(R.id.chat_root);
 
         mAuth = FirebaseAuth.getInstance();
         uid = mAuth.getCurrentUser().getUid();
@@ -64,9 +68,11 @@ private FirebaseListAdapter<Message> adapter;
         submit_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(emojiconEditText.getText().toString() == "")
+                if(emojiconEditText.getText().toString().equals(""))
+                {
+                    Snackbar.make(chat_root, "Вы пытаетесь отправить пустое сообщение", Snackbar.LENGTH_LONG).show();
                     return;
-
+                }
                 FirebaseDatabase.getInstance().getReference("Chat").push().setValue(new Message(usrname, emojiconEditText.getText().toString()));
                 emojiconEditText.setText("");
             }

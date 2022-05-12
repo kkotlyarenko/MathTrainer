@@ -30,7 +30,7 @@ import com.rengwuxian.materialedittext.MaterialEditText;
 
 
 public class GlavnActivity extends AppCompatActivity {
-    TextView uimya, pochta, right, wrong;
+    TextView uimya, pochta, right, wrong, rating;
     Button razlog, change, back_btn, chanhename;
     DatabaseReference reff;
     String uid, pass;
@@ -47,6 +47,7 @@ public class GlavnActivity extends AppCompatActivity {
         pochta = findViewById(R.id.textpocht);
         right = findViewById(R.id.textright);
         wrong = findViewById(R.id.textwrong);
+        rating = findViewById(R.id.textrate);
         razlog = findViewById(R.id.razlog);
         change = findViewById(R.id.change);
         chanhename = findViewById(R.id.changename);
@@ -62,8 +63,10 @@ public class GlavnActivity extends AppCompatActivity {
                 String email = dataSnapshot.child("email").getValue().toString();
                 String rightt = dataSnapshot.child("right").getValue().toString();
                 String wrongt = dataSnapshot.child("wrong").getValue().toString();
+                String ratingg = dataSnapshot.child("rating").getValue().toString();
                 pass = dataSnapshot.child("pass").getValue().toString();
                 uimya.setText("Моё имя: "+name);
+                rating.setText("Мой рейтинг: " + ratingg);
                 pochta.setText("Моя почта: "+email);
                 right.setText("Решено правильно: " + rightt);
                 wrong.setText("Решено неправильно: " + wrongt);
@@ -207,8 +210,8 @@ public class GlavnActivity extends AppCompatActivity {
                                        public void onComplete(@NonNull Task<Void> task) {
                                            if(task.isSuccessful()) {
                                                Snackbar.make(root,"Ваш новый пароль: " + npass2, Snackbar.LENGTH_LONG);
-                                               mAuth.signOut();
                                                FirebaseDatabase.getInstance().getReference().child("Users").child(uid).child("pass").setValue(npass2);
+                                               mAuth.signOut();
                                                finish();
                                                Intent i = new Intent(GlavnActivity.this, MainActivity.class);
                                                startActivity(i);
@@ -226,7 +229,7 @@ public class GlavnActivity extends AppCompatActivity {
                         }
                     }
                     else {
-                        Snackbar.make(glavn_root, "Вы ввели не верный пароль!", Snackbar.LENGTH_LONG).show();
+                        Snackbar.make(glavn_root, "Вы ввели неверный пароль!", Snackbar.LENGTH_LONG).show();
                         return;
                     }
                 }

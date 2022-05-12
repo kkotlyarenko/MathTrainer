@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg"
+    android:background="@color/white"
     android:layout_centerHorizontal="true"
     android:gravity="center_horizontal"
     android:orientation="vertical">
@@ -28,21 +28,34 @@
         android:textAlignment="center"
         android:textColor="@android:color/black"
         android:textSize="20sp" />
+
     <ScrollView
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin = "50px"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_margin="50px"
         android:scrollbars="vertical"
-        android:fillViewport="true"
         >
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:text="@string/instrukcii"
-            android:textSize="20sp"
             android:textColor="@color/colorAccent"
-            />
+            android:textSize="20sp" />
     </ScrollView>
+
+    <Button
+        android:id="@+id/btn_nazad2"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="50px"
+        android:layout_height="60dp"
+        android:text="@string/btn_back"
+        android:background="@drawable/btn_singin"
+        android:fontFamily="@font/roboto_mono_bold"
+        />
 
 
 </LinearLayout>

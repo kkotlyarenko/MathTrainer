@@ -9,4 +9,5 @@
     <color name="btn_signinOb">#a6a6a6</color>
     <color name="txtview">#ababab</color>
     <color name="txtviewOb">#9c9c9c</color>
+    <color name="white">#ffffff</color>
 </resources>

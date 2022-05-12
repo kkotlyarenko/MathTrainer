@@ -154,7 +154,7 @@ public class MainActivity extends AppCompatActivity {
                     return;
                 }
 
-                //Регистрация
+                //Рег
                 auth.createUserWithEmailAndPassword(email.getText().toString(), password.getText().toString()).addOnSuccessListener(new OnSuccessListener<AuthResult>() {
                     @Override
                     public void onSuccess(AuthResult authResult) {
@@ -165,6 +165,7 @@ public class MainActivity extends AppCompatActivity {
                         user.setPass(password.getText().toString());
                         user.setRight(right);
                         user.setWrong(right);
+                        user.setRating("100");
 
                         users.child(FirebaseAuth.getInstance().getCurrentUser().getUid()).setValue(user).addOnSuccessListener(new OnSuccessListener<Void>() {
                             @Override

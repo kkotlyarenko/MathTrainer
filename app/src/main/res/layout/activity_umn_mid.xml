@@ -50,6 +50,7 @@
         android:layout_height="60dp"
         android:id="@+id/otvet"
         android:hint="@string/Vvotvet"
+        android:maxLength="9"
         android:inputType="numberSigned"
         android:textColor="@color/colorAccent"
         android:textColorHint="#636363"
@@ -61,6 +62,7 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
+        android:gravity="center"
         android:fontFamily="@font/roboto_mono_bold"
         android:textColor="@android:color/black"
         android:textSize="30sp" />
